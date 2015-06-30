@@ -101,7 +101,7 @@
     <link href="http://qxly.info/2014/02/26/%E6%9E%81%E5%AE%A2%E9%83%BD%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84Linux%E6%8A%80%E5%B7%A7/"/>
     <id>http://qxly.info/2014/02/26/极客都应该知道的Linux技巧/</id>
     <published>2014-02-26T04:22:31.000Z</published>
-    <updated>2015-06-30T16:09:57.000Z</updated>
+    <updated>2015-06-30T17:12:27.000Z</updated>
     <content type="html"><![CDATA[<p>是什么区分开普通的Linux用户和超级极客的呢？很简单：用在学习那些使长时工作转变为一瞬间工作的技巧、诀窍、秘诀和技术上的时间。如果你想提高效率而又不用做这些搜集资料的跑腿活儿，那我们已经收集了50多条简单易学的Linux技巧，以帮助你更潇洒地工作，并且最大限度的利用你的电脑。开始享受吧！</p>
 <a id="more"></a>
 <h3 id="检查不是由你运行的程序">检查不是由你运行的程序</h3><p>难度：高级<br>应用程序：bash（译注：UNIX或者LINUX的shell）</p>
@@ -480,7 +480,9 @@
     
     </summary>
     
-      <category term="Linux，极客" scheme="http://qxly.info/tags/Linux%EF%BC%8C%E6%9E%81%E5%AE%A2/"/>
+      <category term="Linux" scheme="http://qxly.info/tags/Linux/"/>
+    
+      <category term="极客" scheme="http://qxly.info/tags/%E6%9E%81%E5%AE%A2/"/>
     
       <category term="学习笔记" scheme="http://qxly.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
