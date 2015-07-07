@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Walk steps step by step.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://qxly.info//"/>
-  <updated>2015-06-27T18:50:23.000Z</updated>
+  <updated>2015-07-07T18:10:33.000Z</updated>
   <id>http://qxly.info//</id>
   
   <author>
@@ -16,23 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[我的博客更新了！！]]></title>
-    <link href="http://qxly.info/2015/06/28/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E4%BA%86%EF%BC%81%EF%BC%81/"/>
-    <id>http://qxly.info/2015/06/28/我的博客更新了！！/</id>
+    <title><![CDATA[PHP的数据传输神器cURL]]></title>
+    <link href="http://qxly.info/2015/06/28/PHP%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%A5%9E%E5%99%A8cURL/"/>
+    <id>http://qxly.info/2015/06/28/PHP的数据传输神器cURL/</id>
     <published>2015-06-27T18:48:18.000Z</published>
-    <updated>2015-06-27T18:50:23.000Z</updated>
-    <content type="html"><![CDATA[<p>hahahha…</p>
+    <updated>2015-07-07T18:10:33.000Z</updated>
+    <content type="html"><![CDATA[<h5 id="用cURL制作一个简单的网页爬虫">用cURL制作一个简单的网页爬虫</h5><a id="more"></a>
+<p>查看对cURL支持<br>php -i |grep curl</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $curl = curl_init("http://www.baidu.com");  #初始化curl</span><br><span class="line">    curl_exec($curl);  #执行</span><br><span class="line">    curl_close($curl);  #关闭curl</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>将如上代码保存为a.php,在php目录下执行php -f a.php &gt;baidu.html.<br>查看生成的baidu.html文件，可以发现百度页面已经被我们下载到本地了。</p>
+<h5 id="用cURL抓取网页信息并替换部分内容">用cURL抓取网页信息并替换部分内容</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $curlobj =  curl_init();  #初始化</span><br><span class="line">    curl_setopt($curlobj,  CURLOPT_URL, "http://www.baidu.com" );  #设置访问网页的URL </span><br><span class="line">    curl_setopt($curlobj, CURLOPT_RETURNTRANSFER, true );  #执行之后不直接打印出来</span><br><span class="line">    </span><br><span class="line">    $output = curl_exec($curlobj);  #执行 </span><br><span class="line">    curl_close($curlobj);  #关闭cURL </span><br><span class="line">    echo str_replace("百度", "摆渡", $output ) ;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>将如上代码保存为b.php,在php目录下执行php -f b.php &gt;baidu.html.<br>查看生成的baidu.html文件，可以发现下载到本地的baidu.html中“百度”都被替换成“摆渡”了。</p>
+<p>&lt;未完待续&gt;</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>hahahha…</p>
-]]>
+    <![CDATA[<h5 id="用cURL制作一个简单的网页爬虫">用cURL制作一个简单的网页爬虫</h5>]]>
+    
     </summary>
     
-      <category term="博客" scheme="http://qxly.info/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="PHP" scheme="http://qxly.info/tags/PHP/"/>
     
-      <category term="文章" scheme="http://qxly.info/tags/%E6%96%87%E7%AB%A0/"/>
+      <category term="curl" scheme="http://qxly.info/tags/curl/"/>
     
-      <category term="blog" scheme="http://qxly.info/categories/blog/"/>
+      <category term="学习笔记" scheme="http://qxly.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

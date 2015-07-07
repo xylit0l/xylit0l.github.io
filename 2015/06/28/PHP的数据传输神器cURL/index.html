@@ -24,7 +24,7 @@
 
 
 
-  <meta name="keywords" content="goagent," />
+  <meta name="keywords" content="PHP,curl," />
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-  <title> GoAgent神器 // qxly's Notes </title>
+  <title> PHP的数据传输神器cURL // qxly's Notes </title>
 </head>
 
 <body>
@@ -180,7 +180,7 @@
           
           
             
-              GoAgent神器
+              PHP的数据传输神器cURL
             
           
         </h1>
@@ -188,7 +188,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-01-30
+          发表于 2015-06-28
         </span>
 
         
@@ -208,8 +208,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2014/01/30/GoAgent神器/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2014/01/30/GoAgent神器/"></span>
+            <a href="/2015/06/28/PHP的数据传输神器cURL/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/28/PHP的数据传输神器cURL/"></span>
             </a>
           </span>
           
@@ -223,24 +223,13 @@
       
 
       
-        <p>很多时候亲们在google上检索资源的时候，不可避免都会经常遇上类似“无法显示网页”的提示信息，对于GFW的封锁我已无力吐槽，还是乖乖寻个代理翻出去吧，于是发现了GoAgent，下面是过程：</p>
-<a id="more"></a>
-<h3 id="创建appid">创建appid</h3><p>打开网址：<a href="https://appengine.google.com/" target="_blank" rel="external">https://appengine.google.com/</a><br>申请appid，根据提示填写手机号和接收的验证码，然后ID和ID的识别代码，如果提示”Application Registered successfully“字样appid就算是申请成功了。</p>
-<hr>
-<h3 id="客户端安装与配置">客户端安装与配置</h3><p>URL：<a href="https://goagent.codeplex.com/releases/view/110172" target="_blank" rel="external">https://goagent.codeplex.com/releases/view/110172</a><br>安装的就不多说了，主要是绿色版和安装版的区别，绿色版本是需要手动安装.Net Framework 4.0和Microsoft Visual C++ 2010 Redistributable Package两个组件包的。</p>
-<p>运行程序，点击进入「快速部署」，左边填写google的账号密码，右边先删除原有的两个服务端在填入自己的google appid，点击「开始部署」。「命令行」停止之后，关闭部署窗口，回到主窗口，点击进入「高级设定」，三个选项全选。然后控制台开启代理完成。</p>
-<hr>
-<h3 id="安装Proxy_Switchy_Sharp插件">安装Proxy Switchy Sharp插件</h3><p>在chrome浏览器打开安装即可， 或者在chrome网上应用店搜索下载安装，然后配置如下</p>
-<p><img src="/images/SwitchySharpOption.JPG" alt="Proxy Switchy Sharp"></p>
-<p>现在就可以正常自由的浏览那些被和谐掉的东西了，效果如下：</p>
-<p><img src="/images/youtube.jpg" alt="youtube"></p>
-<h3 id="部署可能会遇上的问题">部署可能会遇上的问题</h3><p>1.命令行如果返回如下，原因是hosts文件被修改或没有权限。<br>解决办法：<1>.将修改了的hosts文件复原 <2>.恢复hosts后用命令ipconfig/flushdns清空一下dns缓存</2></1></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">'Error 403: --- begin server output ---</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=en&gt;</span><br><span class="line">  &lt;meta charset=utf-8&gt;</span><br><span class="line">  &lt;meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width"&gt;</span><br><span class="line">  &lt;title&gt;Error 403 (Forbidden)!!1&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">    *&#123;margin:0;padding:0&#125;html,code&#123;font:15px/22px arial,sans-serif&#125;html&#123;background:#fff;color:#222;padding:15px&#125;body&#123;margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px&#125;* &gt; body&#123;background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px&#125;p&#123;margin:11px 0 22px;overflow:hidden&#125;ins&#123;color:#777;text-decoration:none&#125;a img&#123;border:0&#125;@media screen and (max-width:772px)&#123;body&#123;background:none;margin-top:0;max-width:none;padding-right:0&#125;&#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line">  &lt;a href=//www.google.com/&gt;&lt;img src=//www.google.com/images/errors/logo_sm.gif alt=Google&gt;&lt;/a&gt;</span><br><span class="line">  &lt;p&gt;&lt;b&gt;403.&lt;/b&gt; &lt;ins&gt;That鈥檚 an error.&lt;/ins&gt;</span><br><span class="line">  &lt;p&gt;Your client does not have permission to get URL &lt;code&gt;/api/appversion/rollback&lt;/code&gt; from this server.  &lt;ins&gt;That鈥檚 all we know.&lt;/ins&gt;</span><br><span class="line">--- end server output ---'</span><br></pre></td></tr></table></figure>
-<p>2.命令行提示“AttributeError: can’’t set attribute”字样，这个错误跟google账号设置有关系，尝试后发现上传应用的时候是使用应用程序密码，而不是google密码，如果你的google账号启用 了“两步验证”。<br>解决办法：登录gmail邮箱后，打开两步验证的邮件，点开生成的应用程序密码： <em> jlapdre</em>，用生成的新密码输入后&lt;并不是邮箱密码&gt;，上传成功。</p>
-<p>3.开启代理后浏览器提示，只需要修改proxy.ini文件，把google_cn改成google_hk，重新再启动一下就可以了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">“Google</span><br><span class="line"><span class="number">403.</span> That’s an error.</span><br><span class="line">Your client does <span class="keyword">not</span> have permission to get URL /<span class="number">2</span> <span class="keyword">from</span> this server. That’s all we know.”</span><br></pre></td></tr></table></figure>
-<p>参考资料：<a href="https://code.google.com/p/goagent/wiki/InstallGuide" target="_blank" rel="external">https://code.google.com/p/goagent/wiki/InstallGuide</a></p>
-<p>— EOF —</p>
+        <h5 id="用cURL制作一个简单的网页爬虫">用cURL制作一个简单的网页爬虫</h5><a id="more"></a>
+<p>查看对cURL支持<br>php -i |grep curl</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $curl = curl_init("http://www.baidu.com");  #初始化curl</span><br><span class="line">    curl_exec($curl);  #执行</span><br><span class="line">    curl_close($curl);  #关闭curl</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>将如上代码保存为a.php,在php目录下执行php -f a.php &gt;baidu.html.<br>查看生成的baidu.html文件，可以发现百度页面已经被我们下载到本地了。</p>
+<h5 id="用cURL抓取网页信息并替换部分内容">用cURL抓取网页信息并替换部分内容</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $curlobj =  curl_init();  #初始化</span><br><span class="line">    curl_setopt($curlobj,  CURLOPT_URL, "http://www.baidu.com" );  #设置访问网页的URL </span><br><span class="line">    curl_setopt($curlobj, CURLOPT_RETURNTRANSFER, true );  #执行之后不直接打印出来</span><br><span class="line">    </span><br><span class="line">    $output = curl_exec($curlobj);  #执行 </span><br><span class="line">    curl_close($curlobj);  #关闭cURL </span><br><span class="line">    echo str_replace("百度", "摆渡", $output ) ;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>将如上代码保存为b.php,在php目录下执行php -f b.php &gt;baidu.html.<br>查看生成的baidu.html文件，可以发现下载到本地的baidu.html中“百度”都被替换成“摆渡”了。</p>
+<p>&lt;未完待续&gt;</p>
 
       
     </div>
@@ -249,7 +238,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/goagent/"> #goagent </a>
+            <a href="/tags/PHP/"> #PHP </a>
+          
+            <a href="/tags/curl/"> #curl </a>
           
         </div>
       
@@ -258,13 +249,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2014/02/19/CSS初始化方案收集/">CSS初始化方案收集</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/01/19/Centos-6-4安装Nodejs和npm/">Centos 6.4安装Nodejs和npm</a>
+              <a href="/2014/03/26/体验HTML5的酷炫交互效果/">体验HTML5的酷炫交互效果</a>
             
           </div>
         </div>
@@ -284,8 +273,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2014/01/30/GoAgent神器/"
-               data-title="GoAgent神器" data-url="http://qxly.info/2014/01/30/GoAgent神器/">
+          <div class="ds-thread" data-thread-key="2015/06/28/PHP的数据传输神器cURL/"
+               data-title="PHP的数据传输神器cURL" data-url="http://qxly.info/2015/06/28/PHP的数据传输神器cURL/">
           </div>
         
       </div>
@@ -387,7 +376,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建appid"><span class="nav-number">1.</span> <span class="nav-text">创建appid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端安装与配置"><span class="nav-number">2.</span> <span class="nav-text">客户端安装与配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Proxy_Switchy_Sharp插件"><span class="nav-number">3.</span> <span class="nav-text">安装Proxy Switchy Sharp插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署可能会遇上的问题"><span class="nav-number">4.</span> <span class="nav-text">部署可能会遇上的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#用cURL制作一个简单的网页爬虫"><span class="nav-number">1.</span> <span class="nav-text">用cURL制作一个简单的网页爬虫</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#用cURL抓取网页信息并替换部分内容"><span class="nav-number">2.</span> <span class="nav-text">用cURL抓取网页信息并替换部分内容</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
